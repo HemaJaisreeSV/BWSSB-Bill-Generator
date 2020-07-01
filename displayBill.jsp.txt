@@ -1,0 +1,32 @@
+<%@page import="com.bwssb.water.bean.WaterBillBean"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>displayBill</title>
+</head>
+<body>
+<h1>Water Bill </h1>
+
+<form action="MainServlet" method="post">
+
+    <%
+    	WaterBillBean waterBill = (WaterBillBean)request.getAttribute("waterBill");
+    %>
+    
+	Consumer No <input type="text" name="consumerNumber" size="10" value="<%=waterBill.getconsumerNumber()%>"><br></br>
+	Month <input type="text" name="billMonth" size="10" value="<%=waterBill.getbillMonth()%>"><br></br>
+	Year <input type="text" name="year" size="10" value="<%=waterBill.getYear()%>"><br></br>
+	Start Reading <input type="text" name="startReading" size="10" value="<%=waterBill.getstartReading()%>"><br></br>
+	Current Reading <input type="text" name="currentReading" size="10" value="<%=waterBill.getcurrentReading()%>"><br></br>
+	Consumption<input type="text" name="totalConsumption" size="10" value="<%=waterBill.gettotalConsumption()%>"><br></br>
+	Connection Type <input type="text" name="connectionType" size="10" value="<%=waterBill.getconnectionType()%>"><br></br>
+	Fixed Charges <input type="text" name="fixedCharges" size="10" value="<%=waterBill.getfixedCharges()%>"><br></br>
+	Variable Charges <input type="text" name="variableCharges" size="10" value="<%=waterBill.getvariableCharges()%>"><br></br>
+	Total Charges <input type="text" name="totalCharges" size="10" value="<%=waterBill.gettotalCharges()%>"><br></br>
+	
+</form>
+</body>
+</html>

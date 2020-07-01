@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1">
+<title>generateBill</title>
+</head>
+<body>
+<h1>Enter Bill details</h1>
+<form action="MyServlet" method="post">
+
+     <input type="hidden" name="operation" value="generate"/>
+
+	Consumer No <input type="text" name="consumerNumber" size="10"><br></br>
+	Month <input type="text" name="billMonth" size="10"><br></br>
+	Year <input type="text" name="year" size="10"><br></br>
+	Start Reading <input type="text" name="startReading" size="10"><br></br>
+	Current Reading <input type="text" name="currentReading" size="10"><br></br>
+	Connection Type <input type="text" name="connectionType" size="10"><br></br>
+	<input type="hidden" name="operation" value="generate">
+	
+	<input type="submit" value="GENERATE"  size="20">	
+
+</form>
+</body>
+</html>
